@@ -29,7 +29,7 @@ const brusselsSprouts = [
 ];
 
 const broccoli = [
-  'wash broccoli in cold water',
+  'wash boccoli in cold water',
   'trim and cut the stalk in half, then finely slice it',
   'fill a pot with water, add a pinch of salt and bring to the boil',
   'once boiling, carefully lower the broccoli into the water',
