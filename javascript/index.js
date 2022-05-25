@@ -100,3 +100,25 @@ async function makeBroccoli() {
 makeBroccoli()
 // Bonus 2 - Promise all
 // ...
+
+let allStepArr = []
+
+for (let i = 0; i < brusselsSprouts.length; i+=1) {
+  allStepArr.push(obtainInstruction('brusselsSprouts', i))
+  document.querySelector(
+    '#brusselsSprouts'
+  ).innerHTML += `<li>${brusselsSprouts[i]}</li>`
+}
+
+const allPromises = Promise.all(allStepArr)
+
+allPromises.then(() => {
+  document.querySelector(
+    '#brusselsSprouts'
+  ).innerHTML += `<li>Brussels Sprouts are ready!</li>`
+}).catch(() => {
+  throw Error('I am an error')
+})
+.finally(() => {
+  document.querySelector('#brusselsSproutsImg').removeAttribute('hidden')
+})
